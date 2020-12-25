@@ -25,4 +25,10 @@ class UniqueFactory extends Factory
             'unique'=>$this->faker->text()
         ];
     }
+    public function newTitle()
+    {
+        return $this->state([
+            'unique'=>'New unique title',
+        ]);
+    }
 }
