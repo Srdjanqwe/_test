@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="{{ mix('js/app.js' )}}" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
-        {{-- <li><a href="{{ route('blog-post', ['id'=>1]) }}">Blog Post 1</a></li> --}}
-        <li><a href="{{ route('posts.index') }}">Blog Post</a></li>
-        <li><a href="{{ route('posts.create') }}">User Form</a></li>
-
-    </ul>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white border-bottom shadow-sm mb-3">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Laravel app</h5>
+        <nav class="my-2 my-md-0 mr-md-3" >
+            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('contact') }}">Contact</a>
+            <a href="{{ route('posts.index') }}">Blog Post</a>
+            <a href="{{ route('posts.create') }}">User Form</a>
+        </nav>
+    </div>
 
     @if(session()->has('status'))
         <p style="color: green">
