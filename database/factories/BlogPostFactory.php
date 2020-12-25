@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\BlogPost;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UniqueFactory extends Factory
+class BlogPostFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -22,13 +22,13 @@ class UniqueFactory extends Factory
     public function definition()
     {
         return [
-            'unique'=>$this->faker->text()
+            'unique'=>$this->faker->regexify('[A-Za-z0-9]{10}')
         ];
     }
     public function newTitle()
     {
         return $this->state([
-            'unique'=>'New unique title',
+            'unique'=>''
         ]);
     }
 }
