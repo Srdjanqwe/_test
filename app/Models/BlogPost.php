@@ -13,4 +13,10 @@ class BlogPost extends Model
     protected $fillable = ['unique']; // ovo znaci da iz massassigmenta moze biti fillable
 
     // protected $fillable = ['title', 'content']; // ovo znaci da iz massassigmenta moze biti fillable
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+
 }
