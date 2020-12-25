@@ -10,7 +10,7 @@
         <input type="text" name="unique">
         </p>
 
-        {{-- <p>
+        <p>
         <label>Title</label>
         <input type="text" name="title" value="{{ old('title') }}">
         </p>
@@ -18,7 +18,7 @@
         <p>
             <label>Content</label>
             <input type="text" name="content" value="{{ old('content') }}">
-        </p> --}}
+        </p>
 
 
         {{-- @if($errors->any())
