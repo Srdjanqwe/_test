@@ -4,6 +4,7 @@
 // use App\Http\Controllers\HomeController; // za L8 trazi da doda kada ubacim controller
 // use App\Http\Controllers\PostController; // za L8 trazi da doda kada ubacim controller
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -37,6 +38,7 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 // Route::resource('/posts', PostController::class); // za L8 postcontr ovako radi
 Route::resource('/posts', 'PostController'); // za L8 postcontr ovako radi i ovako radi
 
+Auth::routes();
 
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!//
