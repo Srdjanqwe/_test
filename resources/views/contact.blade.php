@@ -18,7 +18,7 @@
                     <tr>
                         {{-- <td>{{ $this->name}}}</td> --}}  {{-- name user-a tog id koji je napravio unique --}}
                         {{-- <td>{{ $this->Unique}}}</td> --}}
-                        {{-- <td>{{}}</td> --}}
+                        {{-- <td>{{Login Count}}</td> --}}
                         <td><a href="login">Login As</a></td>
                     </tr>
                 </tbody>

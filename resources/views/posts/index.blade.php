@@ -1,17 +1,36 @@
 @extends('layout')
 
 @section('content')
-    @foreach ($posts as $post)
-        <p>
-            {{-- <h3>{{ $post->unique }}</h3> --}}
-            <h3><a href="{{ route('posts.show', ['post' =>$post->id]) }}">{{ $post->unique }}</a></h3>
+        <div class="container">
+            <div class="row" style="margin-top: 45rpx">
+                <div class="col-md-6 col-md-offset-3">
+                    <table class="table table-hover">
+                        <h4>List of Users</h4>
+                        <hr>
+                        <thead>
+                            <th>Name</th>
+                            <th>Unique</th>
+                            <th>Login Count</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            @foreach ($posts as $post)
 
-            <div class="mb-3">
-                <a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Edit</a>
+                                <tr>
+                                    {{-- <td>{{ $this->name}}}</td> --}}  {{-- name user-a tog id koji je napravio unique --}}
+                                    <td><a href="{{ route('posts.show', ['post' =>$post->id]) }}">{{ $post->unique ?? null}}</a></td>
+                                    <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Edit</a></td>
+                                    {{-- <td>{{Login Count}}</td> --}}
+                                    @can('home.secret')
+                                    <td><a class="btn btn-primary" href="login">Login As</a></td>
+                                    @endcan
+                                </tr>
+                             @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </p>
-
-
-    @endforeach
+        </div>
 
 @endsection('content')
