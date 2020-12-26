@@ -1,6 +1,6 @@
 <div class="form-group">
     <label>Name</label>
-    <input id="name" type="text" name="name"  value="{{ old('name', $post->name ?? null) }}">
+    <input id="name" type="text" name="name"  value="{{ old('name', $post->name) }}">
 </div>
 
 <div class="form-group">

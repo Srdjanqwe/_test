@@ -1,5 +1,3 @@
-{{-- ovo je user form  --}}
-
 @extends('layout')
 
 @section('content')
