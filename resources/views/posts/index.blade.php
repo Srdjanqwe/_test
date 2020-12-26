@@ -22,7 +22,7 @@
                                     <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Edit</a></td>
 
                                     @can('home.secret')
-                                    <td><a class="btn btn-primary" href="login">Login As</a></td>
+                                        <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Login As</a></td>
                                     @endcan
                                 </tr>
                              @endforeach
