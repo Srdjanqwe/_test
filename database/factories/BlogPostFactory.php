@@ -22,13 +22,15 @@ class BlogPostFactory extends Factory
     public function definition()
     {
         return [
-            'unique'=>$this->faker->regexify('[A-Za-z0-9]{0,10}')
+            'unique'=>$this->faker->regexify('[A-Za-z0-9]{0,10}'),
+            'name'=>$this->faker-> name()
         ];
     }
     public function newTitle()
     {
         return $this->state([
-            'unique'=>''
+            'unique'=>'',
+            'name'=>''
         ]);
     }
 }

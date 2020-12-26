@@ -15,7 +15,8 @@ class AddUserToBlogpostsTable extends Migration
     {
         Schema::table('blogposts', function (Blueprint $table) {
 
-            $table->foreignId('user_id')->nullable()->constrained('users'); // ovde ne sme biti unique()
+            // $table->foreignId('user_id')->nullable()->constrained('users'); // ovde ne sme biti unique()
+            $table->foreignId('user_id')->constrained('users'); // ovde ne sme biti unique()
 
         });
     }

@@ -17,7 +17,7 @@
                             @foreach ($posts as $post)
 
                                 <tr>
-                                    {{-- <td>{{ $this->name}}}</td> --}}  {{-- name user-a tog id koji je napravio unique --}}
+                                    <td>{{ $LoggedUserInfo->name ?? null }}</td>  {{-- name user-a tog id koji je napravio unique --}}
                                     <td><a href="{{ route('posts.show', ['post' =>$post->id]) }}">{{ $post->unique ?? null}}</a></td>
                                     <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Edit</a></td>
                                     {{-- <td>{{Login Count}}</td> --}}

@@ -5,6 +5,6 @@
     {{-- <p>{{ $post->content }}</p> zadatak i da bude read only --}}
 
     <p>{{ $post->unique }}</p> {{-- zadatak i da bude read only --}}
-
+    <p>{{ $post->name }}</p>
 
 @endsection('content')

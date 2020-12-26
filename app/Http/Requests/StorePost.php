@@ -25,7 +25,8 @@ class StorePost extends FormRequest
     {
         return [
 
-                'unique'=>'alpha_num|nullable'
+                'unique'=>'alpha_num|nullable',
+                'name'=>'required'
         ];
     }
 }
