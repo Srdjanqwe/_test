@@ -16,7 +16,6 @@ class AddTittleContentToBlogpostsTable extends Migration
         Schema::table('blogposts', function (Blueprint $table) {
 
             $table->text('unique')->nullable();
-
             // if(env('DB_CONNECTION') === 'sqlite_testing') {
             //     $table->text('content')->default('');
             // } else {
@@ -35,7 +34,6 @@ class AddTittleContentToBlogpostsTable extends Migration
         Schema::table('blogposts', function (Blueprint $table) {
 
             $table->dropColumn(['unique']);
-
         });
     }
 }

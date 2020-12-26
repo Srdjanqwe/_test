@@ -16,7 +16,7 @@ class BlogPostTableSeeder extends Seeder
         $users = \App\Models\User::all();
 
         \App\Models\BlogPost::factory($blogCount)->make()->each(function($posts) use ($users) {
-            $posts->user_name = $users-> random()->id;
+            // $posts->user_name = $users-> random()->id;
             $posts->user_id = $users -> random()->id;
             $posts->save();
         });

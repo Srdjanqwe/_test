@@ -17,10 +17,10 @@
                             @foreach ($posts as $post)
 
                                 <tr>
-                                    <td>{{ $post->user->name ?? null }}</td>
+                                    <td><a href="{{ route('posts.show', ['post' =>$post->id]) }}">{{ $post->user->name ?? null}}</a></td>
                                     <td><a href="{{ route('posts.show', ['post' =>$post->id]) }}">{{ $post->unique ?? null}}</a></td>
                                     <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Edit</a></td>
-                                    {{-- <td>{{Login Count}}</td> --}}
+
                                     @can('home.secret')
                                     <td><a class="btn btn-primary" href="login">Login As</a></td>
                                     @endcan
