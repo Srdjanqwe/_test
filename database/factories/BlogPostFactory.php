@@ -23,7 +23,7 @@ class BlogPostFactory extends Factory
     {
         return [
             'unique'=>$this->faker->regexify('[A-Za-z0-9]{0,10}'),
-            'name'=>$this->faker-> name()
+            // 'name'=>$this->faker-> name()
         ];
     }
     public function newTitle()

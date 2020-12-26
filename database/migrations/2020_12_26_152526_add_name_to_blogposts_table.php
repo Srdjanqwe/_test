@@ -14,8 +14,8 @@ class AddNameToBlogpostsTable extends Migration
     public function up()
     {
         Schema::table('blogposts', function (Blueprint $table) {
-            // $table->foreignId('user_name')->nullable()->constrained('users'); // ovde ne sme biti unique()
-            $table->foreignId('user_name')->constrained('users'); // ovde ne sme biti unique()
+            $table->foreignId('user_name')->nullable()->constrained('users'); // ovde ne sme biti unique()
+            // $table->foreignId('user_name')->constrained('users'); // ovde ne sme biti unique()
 
         });
     }

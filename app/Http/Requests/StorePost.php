@@ -24,7 +24,6 @@ class StorePost extends FormRequest
     public function rules()
     {
         return [
-
                 'name'=>'required',
                 'unique'=>'alpha_num|nullable',
         ];
