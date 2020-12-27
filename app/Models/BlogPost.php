@@ -11,7 +11,7 @@ class BlogPost extends Model
 
     protected $table = 'blogposts'; // za tinker donja crta bug
     protected $fillable = ['unique']; // ovo znaci da iz massassigmenta moze biti fillable
-    // protected $fillable = ['unique','name']; // ovo znaci da iz massassigmenta moze biti fillable
+    // protected $fillable = ['name','unique']; // ovo znaci da iz massassigmenta moze biti fillable
     // protected $fillable = ['title', 'content']; // ovo znaci da iz massassigmenta moze biti fillable
 
     public function user()

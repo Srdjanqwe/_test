@@ -25,7 +25,8 @@
                                         <td><a class="btn btn-primary" href="{{ route('posts.edit', ['post' => $post->id]) }}">Login As</a></td>
                                     @endcan
                                 </tr>
-                             @endforeach
+
+                            @endforeach
 
                         </tbody>
                     </table>
